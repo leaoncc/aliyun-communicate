@@ -6,8 +6,6 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
-
-	"github.com/KenmyZhang/aliyun-communicate/sms-lib"
 )
 
 type SmsClient struct {

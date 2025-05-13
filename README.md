@@ -27,7 +27,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/KenmyZhang/aliyun-communicate"
+	"github.com/leaoncc/aliyun-communicate"
 )
 
 var (
