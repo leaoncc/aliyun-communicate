@@ -4,8 +4,10 @@ package aliyunsmsclient
 
 import (
 	"encoding/json"
-	"io/ioutil"
+	"io"
 	"net/http"
+
+	aliyunsmslib "github.com/leaoncc/aliyun-communicate/sms-lib"
 )
 
 type SmsClient struct {
@@ -37,7 +39,7 @@ func (smsClient *SmsClient) Execute(accessKeyId, accessKeySecret, phoneNumbers, 
 	if err != nil {
 		return nil, err
 	}
-	body, err := ioutil.ReadAll(response.Body)
+	body, err := io.ReadAll(response.Body)
 	if err != nil {
 		return nil, err
 	}
